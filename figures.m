@@ -1,6 +1,6 @@
 function varargout = figures(varargin)
 %FIGURES Create figure windows.
-%   FIGURES is the same as the figure command; it created a new figure
+%   FIGURES is the same as the figure command; it creates a new figure
 %   window.
 %
 %   FIGURES(n) creates n figures in ascending order. Any figure windows
