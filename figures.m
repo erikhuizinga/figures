@@ -3,8 +3,8 @@ function varargout = figures(varargin)
 %   FIGURES is the same as the figure command; it creates a new figure
 %   window.
 %
-%   FIGURES(n) creates n figures in ascending order. Any figure windows
-%   currently open are not replaced. Instead, the lowest available numbers
+%   FIGURES(n) creates n figures in ascending order. Any currently existing
+%   figure windows are not replaced. Instead, the lowest available numbers
 %   are used to create the figure windows. For example, when figure 2 and 3
 %   already exist, a call to FIGURES(2) creates figure 1 and 4.
 %
