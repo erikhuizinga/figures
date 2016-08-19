@@ -6,7 +6,8 @@ function varargout = figures(varargin)
 %   FIGURES(n) creates n figures in ascending order. Any currently existing
 %   figure windows are not replaced. Instead, the lowest available numbers
 %   are used to create the figure windows. For example, when figure 2 and 3
-%   already exist, a call to FIGURES(2) creates figure 1 and 4.
+%   already exist, a call to FIGURES(2) creates figure 1 and 4. n must be a
+%   scalar positive integer.
 %
 %   FIGURES(N) activates the figure windows with the numbers in vector N.
 %   Any non-existent figure windows are created. N must be a vector of
