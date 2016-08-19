@@ -1,4 +1,4 @@
-# `figures`, a MATLAB function to create multiple figure windows
+# `figures`: a MATLAB function to create multiple figure windows
 `figures` is a function that extends the default functionality of MATLAB's built-in [`figure`](http://mathworks.com/help/matlab/ref/figure.html) command. `figures` remains highly compatible with the syntax of the `figure` command while adding support for the creation and editing of one or more figure windows at once.
 
 ## Syntax
