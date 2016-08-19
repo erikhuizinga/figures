@@ -10,7 +10,7 @@ function varargout = figures(varargin)
 %
 %   FIGURES(N) activates the figure windows with the numbers in vector N.
 %   Any non-existent figure windows are created. N must be a vector of
-%   postive integers.
+%   positive integers.
 %
 %   F = FIGURES(__) also returns F, a column vector of handle(s) to the
 %   created or activated figure window(s) in descending order. This order
