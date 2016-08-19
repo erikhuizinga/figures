@@ -12,7 +12,7 @@ function varargout = figures(varargin)
 %   Any non-existent figure windows are created. N must be a vector of
 %   postive integers.
 %
-%   F = FIGURES(__) also returns a column vector of handle(s) to the
+%   F = FIGURES(__) also returns F, a column vector of handle(s) to the
 %   created or activated figure window(s) in descending order. This order
 %   is the same as MATLAB's built-in list of currently existing figure
 %   windows from get(0,'Children'). The order reflects the latest activated
