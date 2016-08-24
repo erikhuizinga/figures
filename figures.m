@@ -1,5 +1,10 @@
 function varargout = figures(varargin)
 %FIGURES Create figure windows.
+%   FIGURES is an extension to the built-in figure command. FIGURES
+%   supports all the syntax options of figure. Hence, it is highly
+%   compatible with most, if not all of your existing MATLAB files. The
+%   syntaxes below are the extended possibilities provided by FIGURES.
+%   
 %   FIGURES is the same as the figure command; it creates a new figure
 %   window.
 %
@@ -13,19 +18,19 @@ function varargout = figures(varargin)
 %   Any non-existent figure windows are created. N must be a vector of
 %   positive integers.
 %
+%   FIGURES(__,'PropertyName',propertyvalue,...) uses the specified
+%   property values for a new, or all created or activated figure windows.
+%
+%   FIGURES(__,C) uses the specified property values in cell C for each
+%   created or activated figure window. Construct C using the following
+%   syntax: C = {{set1}, ..., {setN}}, where each set is any number of
+%   'PropertyName',propertyvalue pairs.
+%
 %   F = FIGURES(__) also returns F, a column vector of handle(s) to the
 %   created or activated figure window(s) in descending order. This order
 %   is the same as MATLAB's built-in list of currently existing figure
 %   windows from get(0,'Children'). The order reflects the latest activated
 %   figure window.
-%
-%   __ = FIGURES(__,'PropertyName',propertyvalue,...) uses the specified
-%   property values for all created or activated figure windows.
-%
-%   __ = FIGURES(__,C) uses the specified property values in cell C for
-%   each created or activated figure window. Construct C using the
-%   following syntax: C = {{set1}, ..., {setN}}, where each set is any
-%   number of 'PropertyName',propertyvalue pairs.
 %
 %   See also FIGURE.
 
@@ -35,7 +40,7 @@ function varargout = figures(varargin)
 %   it under the terms of the GNU General Public License as published by
 %   the Free Software Foundation, either version 3 of the License, or
 %   any later version.
-%   
+%
 %   This program is distributed in the hope that it will be useful,
 %   but WITHOUT ANY WARRANTY; without even the implied warranty of
 %   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -45,32 +50,32 @@ function varargout = figures(varargin)
 %   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 in = varargin;
-if ~nargin
-    f = figure;
+if ~nargin || ~isnumeric(in{1})
+    f = figure(in{:});
     n = 0;
     m = [];
 else
-    if isnumeric(in{1})
-        n = in{1};
-        in(1) = [];
-        if any(mod(n,1))
-            error(['A numeric first input argument must be an (array ' ...
-                'of) positive integers.'])
-        end
-        if isscalar(n)
-            cf = get(0,'Children');
-            if isempty(cf)
-                cf = [];
-            else
-                cf = [cf.Number];
-            end
-            m = 1:numel(cf)+n;
-            m = setdiff(m,cf);
-        else
-            m = n;
-            n = numel(n);
-        end
+    %     if isnumeric(in{1})
+    n = in{1};
+    in(1) = [];
+    if any(mod(n,1))
+        error(['A numeric first input argument must be an (array ' ...
+            'of) positive integers.'])
     end
+    if isscalar(n)
+        cf = get(0,'Children');
+        if isempty(cf)
+            cf = [];
+        else
+            cf = [cf.Number];
+        end
+        m = 1:numel(cf)+n;
+        m = setdiff(m,cf);
+    else
+        m = n;
+        n = numel(n);
+    end
+    %     end
 end
 m = m(:); % force column
 % m is a vector of the figure numbers to open, n = numel(m);
