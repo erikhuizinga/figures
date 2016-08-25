@@ -3,16 +3,15 @@ function varargout = figures(varargin)
 %   FIGURES is an extension to the built-in figure command. FIGURES
 %   supports all the syntax options of figure. Hence, it is highly
 %   compatible with most, if not all of your existing MATLAB files. The
-%   syntaxes below are the extended possibilities provided by FIGURES.
+%   syntaxes below are the extended possibilities provided by FIGURES. Run
+%   figuresdemo for a demonstration of the possibilities of FIGURES.
 %   
 %   FIGURES is the same as the figure command; it creates a new figure
 %   window.
 %
 %   FIGURES(n) creates n figures in ascending order. Any currently existing
 %   figure windows are not replaced. Instead, the lowest available numbers
-%   are used to create the figure windows. For example, when figure 2 and 3
-%   already exist, a call to FIGURES(2) creates figure 1 and 4. n must be a
-%   scalar positive integer.
+%   are used to create the figure windows.
 %
 %   FIGURES(N) activates the figure windows with the numbers in vector N.
 %   Any non-existent figure windows are created. N must be a vector of
@@ -32,7 +31,7 @@ function varargout = figures(varargin)
 %   windows from get(0,'Children'). The order reflects the latest activated
 %   figure window.
 %
-%   See also FIGURE.
+%   See also FIGURESDEMO FIGURE.
 
 %   Copyright (C) 2016 Erik Huizinga, huizinga.erik@gmail.com
 %
