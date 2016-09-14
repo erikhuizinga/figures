@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Figures by erikhuizinga</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/erikhuizinga/figures">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Figures</h1>
+            <h2>A MATLAB function to create multiple figure windows.</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/erikhuizinga/figures/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/erikhuizinga/figures/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="figures-a-matlab-function-to-create-multiple-figure-windows" class="anchor" href="#figures-a-matlab-function-to-create-multiple-figure-windows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>figures</code>: a MATLAB function to create multiple figure windows</h1>
+
+<h2>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description</h2>
+
+<p><code>figures</code> is an extension to MATLAB's built-in <a href="http://mathworks.com/help/matlab/ref/figure.html"><code>figure</code></a> command. <code>figures</code> supports all the syntax options of <code>figure</code>. Hence, it is highly compatible with most, if not all of your existing MATLAB files. The syntaxes below are the extended possibilities provided by <code>figures</code>.</p>
+
+<h2>
+<a id="demonstration" class="anchor" href="#demonstration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demonstration</h2>
+
+<p>Run <code>figuresdemo</code> for a demonstration of the possibilities of <code>figures</code>.</p>
+
+<h2>
+<a id="syntax" class="anchor" href="#syntax" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Syntax</h2>
+
+<ul>
+<li>
+<code>figures</code> does the same as the <code>figure</code> command; it creates a new figure window.</li>
+<li>
+<code>figures(n)</code> creates <code>n</code> figures in ascending order. Any currently existing figure windows are not replaced. Instead, the lowest available numbers are used to create the figure windows. For example, when figure 2 and 3 already exist, a call to <code>figures(2)</code> creates figure 1 and 4. <code>n</code> must be a scalar positive integer.</li>
+<li>
+<code>figures(N)</code> activates the figure windows with the numbers in vector <code>N</code>. Any non-existent figure windows are created. <code>N</code> must be a vector of positive integers.</li>
+<li>
+<code>figures(__,'PropertyName',propertyvalue,...)</code> uses the specified property values for all created or activated figure windows.</li>
+<li>
+<code>figures(__,C)</code> uses the specified property values in cell <code>C</code> for each created or activated figure window. Construct <code>C</code> using the following syntax: <code>C = {{set1}, ..., {setN}}</code>, where each set is any number of <code>'PropertyName',propertyvalue</code> pairs.</li>
+<li>
+<code>F = figures(__)</code> also returns <code>F</code>, a column vector of handle(s) to the created or activated figure window(s) in descending order. This order is the same as MATLAB's built-in list of currently existing figure windows from <code>get(0,'Children')</code>. The order reflects the latest activated figure window.</li>
+</ul>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/erikhuizinga">erikhuizinga</a> can be found on <a href="https://github.com/erikhuizinga/figures">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
