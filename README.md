@@ -1,3 +1,5 @@
+[![MATLAB FEX](https://img.shields.io/badge/MATLAB%20FEX-figures-blue.svg)](https://mathworks.com/matlabcentral/fileexchange/58770-figures) ![R2014b support](https://img.shields.io/badge/supports-R2014b and up-brightgreen.svg)
+
 # `figures`: a MATLAB function to create multiple figure windows
 
 ## Description
