@@ -2,6 +2,7 @@
 %   This demo shows all possible syntaxes of the figures function. This
 %   script consists of sections. Run through them one-by-one by pressing
 %   CTRL+SHIFT+RETURN (on Windows) while the first section is selected.
+%   Warning: figuresdemo closes all figure before the demonstration.
 % 
 %   See also FIGURES
 
@@ -71,3 +72,6 @@ F1 = figures(3);
 display(F1); % see Command Window for output
 F2 = figures(1:3);
 display(F2);
+
+%% example use: close multiple figures with one command
+close(figures(4:6))

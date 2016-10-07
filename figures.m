@@ -4,7 +4,8 @@ function varargout = figures(varargin)
 %   supports all the syntax options of figure. Hence, it is highly
 %   compatible with most, if not all of your existing MATLAB files. The
 %   syntaxes below are the extended possibilities provided by FIGURES. Run
-%   figuresdemo for a demonstration of the possibilities of FIGURES.
+%   figuresdemo for a demonstration of the possibilities of FIGURES
+%   (warning: figuresdemo closes all figure before the demonstration).
 %   
 %   FIGURES is the same as the figure command; it creates a new figure
 %   window.
